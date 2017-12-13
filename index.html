@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>AngularJS</title>
+	<script src="./js/angular135.js"></script>
+</head>
+<body ng-app="myApp">
+
+	<div class="header">
+      <div class="container">
+        <h1>Book End</h1>
+      </div>
+    </div>
+
+    <div class="main" ng-controller="MainController">
+      <div class="container">
+
+        <h1>{{ title }}</h1>
+        <h2>{{ promo }}</h2>
+
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="img/the-book-of-trees.jpg">
+            <p class="title"> {{ product.name | uppercase }}</p>
+            <p class="price"> {{ product.price | currency }} </p>
+            <p class="date"> {{ product.pubdate | date }}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+ <!-- Modules -->
+ <script src="./js/app.js"></script>
+
+ <!-- Controllers -->
+ <script src="./js/controllers/MainController.js"></script>
+</body>
+</html>
